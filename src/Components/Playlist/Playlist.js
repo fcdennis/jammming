@@ -1,14 +1,16 @@
-import { render } from '@testing-library/react'
 import React from 'react'
 import './Playlist.css'
-import { TrackList } from '../TrackList/TrackList'
+
+import TrackList from '../TrackList/TrackList'
 
 export class Playlist extends React.Component {
-    render(){
+    render() {
         return (
             <div className="Playlist">
-                <input value="New Playlist" />
-                <TrackList />
+                <input defaultValue={"New Playlist"} />
+                <TrackList tracks={this.props.playListTracks}
+                    onRemove={this.props.onRemove}
+                    isRemoval={true} />
                 <button className="Playlist-save">SAVE TO SPOTIFY</button>
             </div>
         )
