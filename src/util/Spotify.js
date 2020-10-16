@@ -1,5 +1,5 @@
 const clientId = '3d3d4377a84a481e9948b49493bf5c22'
-const redirectUri = "http://localhost:3000/"
+const redirectUri = "http://hurt-cub.surge.sh/"
 let accessToken;
 
 const Spotify = {
@@ -33,14 +33,14 @@ const Spotify = {
         }).then(response => {
             return response.json();
         }).then(jsonResponse => {
-            if (!jsonResponse.track) {
+            if (!jsonResponse.tracks) {
                 return [];
             }
             return jsonResponse.tracks.items.map(track => ({
                 id: track.id,
                 name: track.name,
-                artist: track.artist[0].name,
-                album: track.album,
+                artist: track.artists[0].name,
+                album: track.album.name,
                 uri: track.uri
             }));
         })

@@ -1,3 +1,10 @@
+### Project ReadMe
+This project source from Codecademy React Course.
+This project is a research music app that take Spotify api as source and allows the user to creat music lists and save them in spotify account.
+It's publish in http://hurt-cub.surge.sh/
+
+
+### Here Start React ReadMe
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
